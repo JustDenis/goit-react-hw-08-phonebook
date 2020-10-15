@@ -1,0 +1,38 @@
+.input {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  background-color: #4caf50;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: all 200ms linear;
+  outline: none;
+}
+
+.button:hover,
+.button:focus{
+    cursor: pointer;
+    background-color: #388E3C;
+    transition: all 200ms linear;
+}

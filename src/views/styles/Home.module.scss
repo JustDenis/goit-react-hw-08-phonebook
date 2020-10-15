@@ -1,0 +1,52 @@
+.home {
+  height: 100vh;
+  background-image: url('../../assets/undraw_develop_app_kvt2.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  &TitleContainer {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &Title {
+    font-size: 32px;
+  }
+
+  &SubTitle {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &Title,
+  &Subtitle {
+    text-align: center;
+  }
+
+  &ButtonsContainer {
+    width: 100%;
+    position: absolute;
+    bottom: 115px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &Button {
+    padding: 10px 15px;
+    width: 100px;
+    text-align: center;
+
+    &LogIn {
+      border: 2px solid #b3b3b3;
+    }
+
+    &Register {
+      color: #ffffff;
+      background-color: #4caf50;
+      border: 2px solid #388E3C;
+    }
+  }
+}

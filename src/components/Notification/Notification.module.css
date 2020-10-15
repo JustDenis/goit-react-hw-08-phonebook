@@ -1,0 +1,17 @@
+.container{
+    padding: 15px 0;
+    position: absolute;
+    width: 70%;
+    background-color: #F44336;
+    text-align: center;
+    top: 20px;
+    right: 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 28px -13px rgba(0,0,0,0.75);
+}
+
+.notificationContent{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+}

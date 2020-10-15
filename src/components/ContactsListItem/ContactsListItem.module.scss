@@ -1,0 +1,42 @@
+.item {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.span {
+  font-size: 18px;
+}
+
+.telLink,
+.button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  transition: all 250ms linear;
+}
+
+.telLink {
+  padding: 5px 8px;
+  background-color: #4caf50;
+  margin-right: 10px;
+}
+
+.button {
+  background-color: #ff5252;
+}
+
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  background-color: #d32f2f;
+  transition: all 250ms linear;
+}

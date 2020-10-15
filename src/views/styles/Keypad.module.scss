@@ -1,0 +1,63 @@
+.keypad{
+    position: absolute;
+    width: 315px;
+    top: 35%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    &Title{
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    &InputSection{
+        margin-bottom: 20px;
+
+        &Delete{
+            position: absolute;
+            right: 10px;
+            top: 75px;
+            font-size: 18px;
+            color: #424242;
+        }
+    }
+
+    &Input{
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+
+    &PhoneButton{
+        padding: 10px;
+        display: block;
+        text-align: center;
+        width: 100%;
+        font-size: 22px;
+        color: #fff;
+        background-color: #4caf50;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    &Numbers{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px;
+        text-align: center;
+        align-items: center;
+
+        &Item{
+            font-size: 32px;
+            background-color: #f2f2f2;
+            border: 2px solid #bdbdbd;
+        }
+    }
+}
