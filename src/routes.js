@@ -7,7 +7,7 @@ export default [
     exact: true,
     component: lazy(() => import('./views/Home' /* webpackChunkName: "Home" */)),
     private: false,
-    restricted: false,
+    restricted: true,
   },
   {
     path: '/keypad',

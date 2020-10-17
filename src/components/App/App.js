@@ -8,6 +8,7 @@ import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import PublickRoute from '../PublickRoute/PublickRoute';
 import { CSSTransition } from 'react-transition-group';
 import Loader from '../Loader/Loader';
+import ReactNotification from 'react-notifications-component'
 
 import routes from '../../routes';
 import authSelectors from '../../redux/auth/authSelectors';
@@ -15,6 +16,9 @@ import contactsSelectors from '../../redux/contacts/contactsSelectors';
 import authOperations from '../../redux/auth/authOperations';
 import { connect } from 'react-redux';
 import LoaderTransition from '../Loader/transitions/LoaderTransition.module.css';
+import 'react-notifications-component/dist/theme.css';
+import 'animate.css/animate.css'
+
 
 class App extends Component {
   componentDidMount() {
@@ -28,6 +32,7 @@ class App extends Component {
     const isLoading = isLoadingContacts || isLoadingAuth ? true : false;
     return (
       <BrowserRouter>
+      <ReactNotification/>
         {isAuthenticated && !isLoadingAuth && <UserMenu />}
         <Layout>
           <Suspense fallback={<Loader/>}>

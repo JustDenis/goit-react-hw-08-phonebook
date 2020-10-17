@@ -6,6 +6,7 @@ import ContactsList from '../components/ContactsList/ContactsList';
 import Notification from '../components/Notification/Notification';
 import Loader from '../components/Loader/Loader';
 
+import { store } from 'react-notifications-component';
 import { CSSTransition } from 'react-transition-group';
 import styles from './styles/App.module.css';
 import NotificationTransition from '../components/Notification/transitions/NotificationTransition.module.css';
@@ -31,10 +32,20 @@ class Contacts extends Component {
   }
 
   handleOpenModal = () => {
-    this.setState({ isOpenModal: true });
-    setTimeout(() => {
-      this.setState({ isOpenModal: false });
-    }, 3000);
+    store.addNotification({
+      title: "Error!",
+      message: "Contact already exist!",
+      type: "danger",
+      insert: "bottom",
+      container: "top-right",
+      animationIn: ["animate__animated", "animate__fadeIn"],
+      animationOut: ["animate__animated", "animate__fadeOut"],
+      dismiss: {
+        duration: 2000,
+        onScreen: false,
+        showIcon: true
+      }
+    });
   };
 
   render() {

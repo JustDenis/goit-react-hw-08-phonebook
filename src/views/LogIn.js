@@ -42,6 +42,7 @@ class LogIn extends Component {
                 name="email"
                 value={email}
                 onChange={this.handleInputChange}
+                required
               />
             </label>
             <label className={styles.authLabel}>
@@ -52,6 +53,7 @@ class LogIn extends Component {
                 name="password"
                 value={password}
                 onChange={this.handleInputChange}
+                required
               />
             </label>
             <button type="submit" className={styles.authButton}>
@@ -59,10 +61,10 @@ class LogIn extends Component {
             </button>
           </form>
           <span className={styles.authHint}>
-            Not registered yet?{' '}
+            Not registered yet?
             <Link className={styles.authHintLink} to="/register">
               Register
-            </Link>{' '}
+            </Link>
             now!
           </span>
         </section>

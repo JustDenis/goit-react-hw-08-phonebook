@@ -17,3 +17,15 @@ a{
     text-decoration: none;
     color: #000;
 }
+
+.notification-close::after{
+    font-size: 32px !important; 
+}
+
+.notification-title{
+    font-size: 16px !important;
+}
+
+.notification-message{
+    font-size: 16px !important;
+}

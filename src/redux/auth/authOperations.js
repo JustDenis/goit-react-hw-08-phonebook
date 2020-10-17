@@ -1,5 +1,6 @@
 import axios from 'axios';
 import authActions from './authActions';
+import { store } from 'react-notifications-component';
 
 axios.defaults.baseURL = 'https://goit-phonebook-api.herokuapp.com';
 
@@ -24,6 +25,20 @@ const register = credentials => dispatch => {
     })
     .catch(error => {
       dispatch(authActions.registerError(error));
+      store.addNotification({
+        title: "Error!",
+        message: "User with the same email already exists!",
+        type: "danger",
+        insert: "bottom",
+        container: "top-right",
+        animationIn: ["animate__animated", "animate__fadeIn"],
+        animationOut: ["animate__animated", "animate__fadeOut"],
+        dismiss: {
+          duration: 5000,
+          onScreen: false,
+          showIcon: true
+        }
+      });
     });
 };
 
@@ -36,7 +51,23 @@ const login = credentials => dispatch => {
       token.set(response.data.token);
       dispatch(authActions.loginSuccess(response.data));
     })
-    .catch(error => authActions.loginError(error));
+    .catch(error => {
+      dispatch(authActions.loginError(error));
+      store.addNotification({
+        title: "Error!",
+        message: "Invalid email or password!",
+        type: "danger",
+        insert: "bottom",
+        container: "top-right",
+        animationIn: ["animate__animated", "animate__fadeIn"],
+        animationOut: ["animate__animated", "animate__fadeOut"],
+        dismiss: {
+          duration: 5000,
+          onScreen: false,
+          showIcon: true
+        }
+      });
+    });
 };
 
 const logout = () => dispatch => {
@@ -48,7 +79,7 @@ const logout = () => dispatch => {
       token.unset();
       dispatch(authActions.logoutSuccess());
     })
-    .catch(error => authActions.logoutError(error));
+    .catch(error => dispatch(authActions.logoutError(error)));
 };
 
 const getCurrentUser = () => (dispatch, getState) => {

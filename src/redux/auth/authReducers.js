@@ -22,6 +22,10 @@ const error = createReducer(null, {
   [authActions.loginError]: (_, { payload }) => payload,
   [authActions.logoutError]: (_, {payload}) => payload,
   [authActions.getCurrentUserError]: (_, {payload}) => payload,
+  [authActions.loginSuccess]: () => null,
+  [authActions.registerSuccess]: () => null,
+  [authActions.logoutSuccess]: () => null,
+  [authActions.getCurrentUserSuccess]: () => null,
 });
 
 const loading = createReducer(false, {

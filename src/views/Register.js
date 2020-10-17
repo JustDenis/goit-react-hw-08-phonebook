@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { store } from 'react-notifications-component';
 
 class Register extends Component {
   state = {
@@ -20,6 +21,24 @@ class Register extends Component {
 
   handleFormSubmit = e => {
     e.preventDefault();
+    if(this.state.password.length < 7){
+      store.addNotification({
+        title: "Error!",
+        message: "Minimal password length is 7!",
+        type: "danger",
+        insert: "bottom",
+        container: "top-right",
+        animationIn: ["animate__animated", "animate__fadeIn"],
+        animationOut: ["animate__animated", "animate__fadeOut"],
+        dismiss: {
+          duration: 3000,
+          onScreen: false,
+          showIcon: true
+        }
+      });
+      this.setState({password: ''})
+      return;
+    }
 
     this.props.onRegister({ ...this.state });
     this.setState({ name: '', email: '', password: '' });
@@ -43,6 +62,7 @@ class Register extends Component {
                 name="name"
                 value={name}
                 onChange={this.handleInputChange}
+                required
               />
             </label>
             <label className={styles.authLabel}>
@@ -53,6 +73,7 @@ class Register extends Component {
                 name="email"
                 value={email}
                 onChange={this.handleInputChange}
+                required
               />
             </label>
             <label className={styles.authLabel}>
@@ -63,6 +84,7 @@ class Register extends Component {
                 name="password"
                 value={password}
                 onChange={this.handleInputChange}
+                required
               />
             </label>
             <button type="submit" className={styles.authButton}>
@@ -70,7 +92,7 @@ class Register extends Component {
             </button>
           </form>
           <span className={styles.authHint}>
-            Already Registered?{' '}
+            Already Registered?
             <Link className={styles.authHintLink} to="/login">
               Sign in
             </Link>
