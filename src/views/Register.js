@@ -92,7 +92,7 @@ class Register extends Component {
             </button>
           </form>
           <span className={styles.authHint}>
-            Already Registered?
+            Already Registered?{' '}
             <Link className={styles.authHintLink} to="/login">
               Sign in
             </Link>

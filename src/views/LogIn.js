@@ -61,10 +61,10 @@ class LogIn extends Component {
             </button>
           </form>
           <span className={styles.authHint}>
-            Not registered yet?
+            Not registered yet?{' '}
             <Link className={styles.authHintLink} to="/register">
               Register
-            </Link>
+            </Link>{' '}
             now!
           </span>
         </section>
