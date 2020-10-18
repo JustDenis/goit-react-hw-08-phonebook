@@ -8,7 +8,7 @@ const UserMenu = ({ userName, onLogout }) => {
   return (
     <section className={styles.userMenuContainer}> 
       <span className={styles.userMenuGreeting}>Hello, {userName}</span>
-      <button className={styles.userMenuButton} type="button" onClick={onLogout}>LogOut</button>
+      <button className={styles.userMenuButton} type="button" onClick={onLogout}>Logout</button>
     </section>
   );
 };

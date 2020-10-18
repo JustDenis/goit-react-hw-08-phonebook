@@ -1,7 +1,7 @@
 import React from 'react';
 import ContactListItem from '../ContactsListItem/ContactListItem';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import itemTransition from './transitions/itemTransition.module.css';
+import itemTransition from './transitions/itemTransition.module.scss';
 import { connect } from 'react-redux';
 import contactsSelectors from '../../redux/contacts/contactsSelectors';
 

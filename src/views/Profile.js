@@ -12,7 +12,7 @@ const Profile = ({user: {name, email}, onLogout}) => {
           <li className={styles.profileListItem}><strong>Name:</strong> {name}</li>
           <li className={styles.profileListItem}><strong>Email:</strong> {email}</li>
       </ul>
-      <button className={styles.profileButton} type="button" onClick={onLogout}>LogOut</button>
+      <button className={styles.profileButton} type="button" onClick={onLogout}>Logout</button>
   </section>;
 };
 

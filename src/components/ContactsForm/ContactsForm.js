@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import contactsOperations from '../../redux/contacts/contactsOperations';
-import styles from './ContactFrom.module.css';
+import styles from './ContactFrom.module.scss';
 import contactsSelectors from '../../redux/contacts/contactsSelectors';
 import { store } from 'react-notifications-component';
 

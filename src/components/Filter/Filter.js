@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Filter.module.css';
+import styles from './Filter.module.scss';
 import {connect} from 'react-redux';
 import contactsActions from '../../redux/contacts/contactsActions';
 

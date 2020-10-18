@@ -7,10 +7,10 @@ import Loader from '../components/Loader/Loader';
 
 import { store } from 'react-notifications-component';
 import { CSSTransition } from 'react-transition-group';
-import styles from './styles/App.module.css';
+import styles from './styles/Contacts.module.scss';
 import FromSectionTransition from '../components/ContactsForm/transitions/FormSectionTransitions.module.scss';
-import ContactsSectionTransition from '../components/ContactsList/transitions/ContactsSectionTransition.module.css';
-import LoaderTransition from '../components/Loader/transitions/LoaderTransition.module.css';
+import ContactsSectionTransition from './styles/transition/ContactsSectionTransition.module.scss';
+import LoaderTransition from '../components/Loader/transitions/LoaderTransition.module.scss';
 import contactsOperations from '../redux/contacts/contactsOperations';
 import contactsSelectors from '../redux/contacts/contactsSelectors';
 
@@ -70,7 +70,7 @@ class Contacts extends Component {
           classNames={ContactsSectionTransition}
           timeout={250}
         >
-          <section>
+          <section className={styles.sectionLastItem}>
             <h2 className={styles.title}>Contacts</h2>
             {isRenderContacts ? (
               <section className={styles.section}>

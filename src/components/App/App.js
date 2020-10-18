@@ -15,7 +15,7 @@ import authSelectors from '../../redux/auth/authSelectors';
 import contactsSelectors from '../../redux/contacts/contactsSelectors';
 import authOperations from '../../redux/auth/authOperations';
 import { connect } from 'react-redux';
-import LoaderTransition from '../Loader/transitions/LoaderTransition.module.css';
+import LoaderTransition from '../Loader/transitions/LoaderTransition.module.scss';
 import 'react-notifications-component/dist/theme.css';
 import 'animate.css/animate.css'
 
